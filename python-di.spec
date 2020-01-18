@@ -5,7 +5,7 @@
 
 Name:           python-di
 Version:        0.3
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Python library for dependency injection support
 
 License:        GPLv2+
@@ -52,6 +52,9 @@ rm -rf ${buildroot}%{python_sitelib}/setuptools/tests
 %doc README COPYING
 
 %changelog
+* Fri Dec 27 2013 Daniel Mach <dmach@redhat.com> - 0.3-2
+- Mass rebuild 2013-12-27
+
 * Fri Mar 22 2013 Martin Sivak <msivak@euryale.brq.redhat.com> - 0.3-1
 - Rename the register method to _inject_
 

@@ -1,0 +1,25 @@
+Dependency injection framework for Python
+
+DI_ENABLE - module variable to enable/disable
+            the whole DI mechanism (default: True)
+
+@inject   - decorator for classes, function or methods
+            that prepares the injections and executes
+            then when the decorated function or method
+            is called.
+
+            When used on a class it only prepares the
+            structures and instance methods that use DI
+            must be decorated by @usesclassinject
+
+@usesclassinject - this marks an instance method which
+                   should use DI prepared by @inject
+                   on a class level
+
+Known issues and limitations:
+
+- it is not able to redefine a variable name which is
+  also provided by closure (closure one has priority)
+
+- decorated class shares it's DI dictionary between
+  all it's instances
